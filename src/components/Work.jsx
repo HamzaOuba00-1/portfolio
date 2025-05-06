@@ -35,9 +35,9 @@ const Work = () => {
     },
     {
       id: 3,
-      title: "Time2bUS",
-      shortDescription: "Time2bUS is a mobile app that sends smart, location-based reminders to help users catch their bus or train on time",
-      longDescription: `Time2bUS is a smart mobile app that helps users catch their bus or train on time by sending location-based reminders. It uses manual or AI-powered schedule input and calculates the distance to the transit stop to notify users exactly when to leave for a smooth and timely commute.`,
+      title: "Time2Bus",
+      shortDescription: "Time2Bus is a mobile app that sends smart, location-based reminders to help users catch their bus or train on time",
+      longDescription: `Time2Bus is a smart mobile app that helps users catch their bus or train on time by sending location-based reminders. It uses manual or AI-powered schedule input and calculates the distance to the transit stop to notify users exactly when to leave for a smooth and timely commute.`,
       image: project3,
       videoUrl: "https://www.youtube.com/embed/SsKLWGjl9ts",
       githubLink: "https://github.com/HamzaOuba00-1/time2bus",

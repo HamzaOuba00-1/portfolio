@@ -127,7 +127,7 @@ const Contact = () => {
               <div>
                 <p className=" text-purple-500 text-lg font-medium">LinkedIn</p>
                 <p className="text-white  hover:text-purple-500 transition-colors duration-300">
-                  Hamza ouba
+                  Hamza OUBA
                 </p>
               </div>
             </motion.div>
@@ -159,7 +159,7 @@ const Contact = () => {
           <input
             type="hidden"
             name="time"
-            value={new Date().toLocaleString()} // ajoute la date/heure actuelle automatiquement
+            value={new Date().toLocaleString()}
           />
           <div>
             <input

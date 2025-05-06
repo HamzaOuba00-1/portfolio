@@ -26,6 +26,7 @@ const Companies = () => {
     "Flutter",
     "MySQL",
     "Vite",
+    "Spring Boot",
   ];
 
   const companiesList = [...companies, ...companies];
