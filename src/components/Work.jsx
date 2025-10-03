@@ -7,6 +7,7 @@ import project5 from "../assets/3.png";
 import project6 from "../assets/6.png";
 import project7 from "../assets/2.png";
 import project8 from "../assets/8.png";
+import project9 from "../assets/9.png";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 import Companies from "./Companies";
@@ -15,6 +16,15 @@ const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    {
+      id: 9,
+      title: " Current project — Hotel Management 360° SaaS",
+      shortDescription: "TriStay is a unified hotel management platform built around three roles—Manager, Employee, and Guest. 30% complete (Manager pole).",
+      longDescription: `Status: 30% complete, focused on the Manager pole.  Implemented: user management, hotel setup, room inventory, reservations, planning/calendar, real-time chat, and employee time tracking (pointage).`,
+      image: project9,
+      videoUrl: "https://www.youtube.com/embed/fC0f_gR5PgE",
+      githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
+    },
     {
       id: 1,
       title: "E-commerce Platform ",
@@ -132,6 +142,7 @@ const Work = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projects.map((project, index) => {
             const ref = React.createRef();
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const inView = useInView({ triggerOnce: true, threshold: 0.5 });
             return (
               <motion.div
@@ -168,7 +179,7 @@ const Work = () => {
         ref={companiesRef}
         initial={{ opacity: 0, y: 100 }}
         animate={companiesInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.3 }}
       >
         <Companies />
       </motion.div>

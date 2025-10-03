@@ -62,14 +62,14 @@ const About = () => {
                 ref={ref} 
                 initial={{opacity:0}}
                 animate={inView ? {opacity:1} : {}}
-                transition={{delay:1.2, duration:0.3}}
+                transition={{delay:0.3, duration:0.3}}
                 className='text-center'>
                     <h3 className='text-3xl md:text-8xl font-bold md:my-6 text-purple-500'>4</h3>
                     <motion.p 
                     ref={ref} 
                     initial={{opacity:0, y:100}}
                     animate={inView ? {opacity:1, y:0} : {}}
-                    transition={{delay:1.7, duration:0.5}}
+                    transition={{delay:0.3, duration:0.5}}
                     className='text-sm sm:text-base text-gray-300'>4th-Year Engineering Student</motion.p>
                 </motion.div>
             
@@ -78,14 +78,14 @@ const About = () => {
                 ref={ref} 
                 initial={{opacity:0}}
                 animate={inView ? {opacity:1} : {}}
-                transition={{delay:1.4, duration:0.3}} 
+                transition={{delay:0.3, duration:0.3}} 
                 className='text-center'>
                     <h3 className='text-3xl md:text-8xl font-bold md:my-6 text-purple-500'>5+</h3>
                     <motion.p 
                     ref={ref} 
                     initial={{opacity:0, y:100}}
                     animate={inView ? {opacity:1, y:0} : {}}
-                    transition={{delay:1.8, duration:0.5}} 
+                    transition={{delay:0.3, duration:0.5}} 
                     className='text-sm sm:text-base text-gray-300'>Years of Freelance Experience</motion.p>
                 </motion.div>
             
@@ -94,14 +94,14 @@ const About = () => {
                 ref={ref} 
                 initial={{opacity:0}}
                 animate={inView ? {opacity:1} : {}}
-                transition={{delay:1.6, duration:0.3}}  
+                transition={{delay:0.3, duration:0.3}}  
                 className='text-center'>
                     <h3 className='text-3xl md:text-8xl font-bold md:my-6 text-purple-500'>12+</h3>
                     <motion.p 
                     ref={ref} 
                     initial={{opacity:0, y:100}}
                     animate={inView ? {opacity:1, y:0} : {}}
-                    transition={{delay:1.9, duration:0.5}}  
+                    transition={{delay:0.3, duration:0.5}}  
                     className='text-sm sm:text-base text-gray-300'>Projects Built This Year</motion.p>
                 </motion.div>
             </div>

@@ -3,30 +3,52 @@ import { animate, motion } from "framer-motion";
 
 const Companies = () => {
   const companies = [
-    "Python",
+    // Langages
     "C",
+    "C#",
     "Java",
     "JavaScript",
     "TypeScript",
-    "C#",
+    "PHP",
+    "Python",
+
+    // Front-end
     "HTML",
     "CSS",
-    "React JS",
-    "TailwindCSS",
-    "PHP",
-    "Laravel",
-    "React Native",
+    "Tailwind CSS",
+    "React",
     "Angular",
-    "Node JS",
-    "Canva",
-    "Figma",
-    "Adobe Illustrator",
-    "Docker",
-    "Django",
-    "Flutter",
-    "MySQL",
-    "Vite",
+    "Vue",
+
+    // Back-end
+    "Node.js",
     "Spring Boot",
+    ".NET",
+    "Django",
+    "Laravel",
+
+    // Mobile
+    "React Native",
+    "Flutter",
+
+    // Cloud & CI/CD
+    "AWS",
+    "Microsoft Azure",
+    "GitHub Actions",
+    "GitLab CI/CD",
+    "Jenkins",
+
+    // Conteneurs & Outils
+    "Docker",
+    "Git",
+    "Maven",
+    "SonarQube",
+
+    // Design / UI
+    "Figma",
+    "Canva",
+    "Adobe Illustrator",
+    "Adobe Photoshop",
   ];
 
   const companiesList = [...companies, ...companies];
