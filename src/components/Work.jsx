@@ -22,7 +22,7 @@ const Work = () => {
       shortDescription: "TriStay is a unified hotel management platform built around three roles—Manager, Employee, and Guest. 30% complete (Manager pole).",
       longDescription: `Status: 30% complete, focused on the Manager pole.  Implemented: user management, hotel setup, room inventory, reservations, planning/calendar, real-time chat, and employee time tracking (pointage).`,
       image: project9,
-      videoUrl: "https://www.youtube.com/embed/fC0f_gR5PgE",
+      videoUrl: "https://www.youtube.com/embed/T1OW5OfYdtQ",
       githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
     },
     {
