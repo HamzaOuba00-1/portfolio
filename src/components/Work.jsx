@@ -18,9 +18,12 @@ const Work = () => {
   const projects = [
     {
       id: 9,
-      title: " Current project — Hotel Management 360° SaaS",
-      shortDescription: "TriStay is a unified hotel management platform built around three roles—Manager, Employee, and Guest. 30% complete (Manager pole).",
-      longDescription: `Status: 30% complete, focused on the Manager pole.  Implemented: user management, hotel setup, room inventory, reservations, planning/calendar, real-time chat, and employee time tracking (pointage).`,
+      title: "TriStay — Hotel Management 360° (SaaS, In Progress)",
+      shortDescription:
+        "Unified hotel platform for Manager, Employee, and Guest roles. ~30% complete with focus on the Manager module. Tech: Spring Boot (backend) + React (frontend).",
+      longDescription: `Status: ~30% complete, currently focused on the Manager module.
+Implemented so far: user & role management (RBAC), hotel/property setup, room inventory, reservations workflow, planning/calendar, real-time chat, and employee time tracking (pointage).
+Technology: Spring Boot powers the backend REST APIs and business logic; React delivers a modern, responsive frontend SPA.`,
       image: project9,
       videoUrl: "https://www.youtube.com/embed/T1OW5OfYdtQ",
       githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
@@ -28,7 +31,8 @@ const Work = () => {
     {
       id: 1,
       title: "E-commerce Platform ",
-      shortDescription: "Azalidor is a modern furniture e-commerce site with user shopping and admin management features.",
+      shortDescription:
+        "Azalidor is a modern furniture e-commerce site with user shopping and admin management features.",
       longDescription: `Azalidor is a modern e-commerce web platform specializing in furniture sales, offering a complete and secure shopping experience for customers alongside a powerful admin dashboard for business management. The admin panel enables brand, category, product, coupon, user, and order management, as well as a message center for customer inquiries. On the user side, the platform features intuitive product browsing, wishlists, real-time order tracking, direct customer support access, and a secure checkout process. Built with robust security in mind, Azalidor integrates role-based access control, input validation, encrypted user authentication, and secure session handling, ensuring a reliable and professional environment for both administrators and shoppers.`,
       image: project1,
       videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
@@ -37,7 +41,8 @@ const Work = () => {
     {
       id: 2,
       title: "7zz Gym",
-      shortDescription: "7zz Gym is a web app that offers gym exercises with muscle info, equipment, and tutorial videos using fitness and video APIs",
+      shortDescription:
+        "7zz Gym is a web app that offers gym exercises with muscle info, equipment, and tutorial videos using fitness and video APIs",
       longDescription: `7zz Gym is a modern web application that helps users discover, learn, and perform gym exercises through a rich and intuitive interface. By integrating the ExerciseDB API and the YouTube Search & Download API, the platform provides detailed information about each exercise—including target muscles, equipment used, and visual demonstrations—along with tutorial videos and related workout suggestions based on muscle group or equipment type.`,
       image: project2,
       videoUrl: "https://www.youtube.com/embed/fNZ7gIKB8RA",
@@ -46,7 +51,8 @@ const Work = () => {
     {
       id: 3,
       title: "Time2Bus",
-      shortDescription: "Time2Bus is a mobile app that sends smart, location-based reminders to help users catch their bus or train on time",
+      shortDescription:
+        "Time2Bus is a mobile app that sends smart, location-based reminders to help users catch their bus or train on time",
       longDescription: `Time2Bus is a smart mobile app that helps users catch their bus or train on time by sending location-based reminders. It uses manual or AI-powered schedule input and calculates the distance to the transit stop to notify users exactly when to leave for a smooth and timely commute.`,
       image: project3,
       videoUrl: "https://www.youtube.com/embed/SsKLWGjl9ts",
@@ -55,7 +61,8 @@ const Work = () => {
     {
       id: 4,
       title: "VisiGen",
-      shortDescription: "VisiGen is a web app that generates images from text prompts using OpenAI’s image generation API",
+      shortDescription:
+        "VisiGen is a web app that generates images from text prompts using OpenAI’s image generation API",
       longDescription: `VisiGen is a web application that uses OpenAI's image generation API to create unique visuals from user-written text prompts. Designed for simplicity and creativity, the platform lets users type a description and instantly receive an AI-generated image, making it easy to bring ideas to life without any graphic design skills.`,
       image: project4,
       videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
@@ -64,7 +71,8 @@ const Work = () => {
     {
       id: 5,
       title: "Aladdin's Flight",
-      shortDescription: "Aladdin's Flight is a web game where players control Aladdin to dodge falling stones.",
+      shortDescription:
+        "Aladdin's Flight is a web game where players control Aladdin to dodge falling stones.",
       longDescription: `Aladdin's Flight is a fast-paced web game where players guide Aladdin on his magic carpet, dodging falling stones using only the up and down arrow keys. With simple controls and an increasing level of difficulty, the game offers a fun and challenging experience that tests the player's reflexes and timing in a magical flying adventure.`,
       image: project5,
       videoUrl: "https://www.youtube.com/embed/VgVPDWNedHY",
@@ -73,7 +81,8 @@ const Work = () => {
     {
       id: 6,
       title: "Human For You",
-      shortDescription: "Human For You is an AI-driven HR platform that predicts employee attrition and delivers personalized, explainable retention strategies.",
+      shortDescription:
+        "Human For You is an AI-driven HR platform that predicts employee attrition and delivers personalized, explainable retention strategies.",
       longDescription: `Human For You is an AI-powered HR platform that predicts employee attrition risk using a machine learning model and provides clear, actionable retention strategies. By analyzing individual employee data and explaining the key factors behind each prediction with tools like SHAP, it helps HR professionals understand the causes of potential turnover and take personalized steps to reduce it effectively.`,
       image: project6,
       videoUrl: "https://www.youtube.com/embed/k6UBYujqfe8",
@@ -82,7 +91,8 @@ const Work = () => {
     {
       id: 7,
       title: "CO2 Calculator",
-      shortDescription: "A web app that estimates daily carbon emissions through a lifestyle quiz and offers personalized tips to reduce the impact.",
+      shortDescription:
+        "A web app that estimates daily carbon emissions through a lifestyle quiz and offers personalized tips to reduce the impact.",
       longDescription: `CO2 Calculator is an interactive web application that estimates a user's daily carbon emissions based on answers to multiple-choice questions about their lifestyle. By calculating the total CO₂ output from habits like transport, energy use, and consumption, the app provides a personalized impact score and tailored advice to help users reduce their environmental footprint in meaningful ways.`,
       image: project7,
       videoUrl: "https://www.youtube.com/embed/KH2f9_I-jzk",
@@ -91,7 +101,8 @@ const Work = () => {
     {
       id: 8,
       title: "TaskPilot",
-      shortDescription: "TaskPilot is a web app that helps users create, organize, and track tasks to boost productivity and manage daily workflows.",
+      shortDescription:
+        "TaskPilot is a web app that helps users create, organize, and track tasks to boost productivity and manage daily workflows.",
       longDescription: `TaskPilot is a web-based task management application that helps users organize and prioritize their daily activities with ease. Through a clean and intuitive interface, users can create tasks, set deadlines, assign priorities, and update statuses to stay focused and productive. Whether for personal use or team planning, the app simplifies task tracking and supports better time and workflow management.`,
       image: project8,
       videoUrl: "https://www.youtube.com/embed/MwCP3Gwdb98",
@@ -100,9 +111,18 @@ const Work = () => {
   ];
 
   // InView séparés
-  const { ref: titleRef, inView: titleInView } = useInView({ triggerOnce: true, threshold: 0 });
-  const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true, threshold: 0 });
-  const { ref: companiesRef, inView: companiesInView } = useInView({ triggerOnce: true, threshold: 0 });
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+  const { ref: companiesRef, inView: companiesInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -115,7 +135,6 @@ const Work = () => {
   return (
     <div id="work" className="py-12 bg-[#0e0c1e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* TITRE */}
         <motion.h2
           ref={titleRef}
@@ -159,8 +178,12 @@ const Work = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl text-white font-semibold mb-2">{project.title}</h3>
-                  <p className="text-slate-400 mb-4">{project.shortDescription}</p>
+                  <h3 className="text-xl text-white font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-400 mb-4">
+                    {project.shortDescription}
+                  </p>
                   <button
                     onClick={() => openModal(project)}
                     className="border-2 border-purple-500 text-purple-500 px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition"
@@ -214,7 +237,9 @@ const Work = () => {
             </div>
 
             <h3 className="text-xl font-semibold mb-2">Description</h3>
-            <p className="text-slate-300 mb-6">{selectedProject.longDescription}</p>
+            <p className="text-slate-300 mb-6">
+              {selectedProject.longDescription}
+            </p>
 
             <a
               href={selectedProject.githubLink}
@@ -232,4 +257,3 @@ const Work = () => {
 };
 
 export default Work;
-
