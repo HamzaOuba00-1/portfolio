@@ -48,7 +48,7 @@ const Navbar = () => {
 
           {/* CTA */}
           <a
-            href="/oubaCV.pdf"
+            href="/hamza_ouba_resume.pdf"
             download
             className="flex items-center gap-2 px-5 py-2 rounded-full
                       text-sm font-medium
