@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Companies from "./Companies";
+import { motion, AnimatePresence } from "framer-motion";
+
 import project1 from "../assets/7.png";
 import project2 from "../assets/5.png";
 import project3 from "../assets/1.png";
@@ -8,9 +11,6 @@ import project6 from "../assets/6.png";
 import project7 from "../assets/2.png";
 import project8 from "../assets/8.png";
 import project9 from "../assets/9.png";
-import { motion } from "motion/react";
-import { useInView } from "react-intersection-observer";
-import Companies from "./Companies";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -18,240 +18,323 @@ const Work = () => {
   const projects = [
     {
       id: 9,
-      title: "TriStay — Hotel Management 360° (SaaS, In Progress)",
+      title: "HotelFlow — Hotel Management & Booking Platform",
       shortDescription:
-        "Unified hotel platform for Manager, Employee, and Guest roles. ~30% complete with focus on the Manager module. Tech: Spring Boot (backend) + React (frontend).",
-      longDescription: `Status: ~30% complete, currently focused on the Manager module.
-Implemented so far: user & role management (RBAC), hotel/property setup, room inventory, reservations workflow, planning/calendar, real-time chat, and employee time tracking (pointage).
-Technology: Spring Boot powers the backend REST APIs and business logic; React delivers a modern, responsive frontend SPA.`,
+        "Full-stack hotel management and online booking platform with role-based access.",
       image: project9,
-      videoUrl: "https://www.youtube.com/embed/T1OW5OfYdtQ",
+      videoUrl: "https://www.youtube.com/embed/beIzHXRxwyo",
       githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
+      descriptionLines: [
+        "HotelFlow is a modern full-stack web application designed for hotel management and online booking",
+        "Multi-role platform: Visitor, Manager, Employee, and Client",
+        "Providing secure and user-friendly public booking interface",
+        "Hotel & room management, reservations, planning, attendance, and internal messaging",
+        "JWT-based authentication with role-based authorization",
+      ],
+      stack: ["Java Spring Boot", "React", "PostgreSQL"],
     },
+
     {
       id: 1,
-      title: "E-commerce Platform ",
+      title: "Azalidor — E-commerce Platform",
       shortDescription:
-        "Azalidor is a modern furniture e-commerce site with user shopping and admin management features.",
-      longDescription: `Azalidor is a modern e-commerce web platform specializing in furniture sales, offering a complete and secure shopping experience for customers alongside a powerful admin dashboard for business management. The admin panel enables brand, category, product, coupon, user, and order management, as well as a message center for customer inquiries. On the user side, the platform features intuitive product browsing, wishlists, real-time order tracking, direct customer support access, and a secure checkout process. Built with robust security in mind, Azalidor integrates role-based access control, input validation, encrypted user authentication, and secure session handling, ensuring a reliable and professional environment for both administrators and shoppers.`,
+        "Modern e-commerce platform with a full admin dashboard and secure shopping experience.",
       image: project1,
       videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
       githubLink: "https://github.com/HamzaOuba00-1/Azalidor-shop",
+      descriptionLines: [
+        "Complete furniture e-commerce experience with wishlist and order tracking",
+        "Admin dashboard for brands, categories, products, orders, users, and coupons",
+        "Secure authentication, role-based access control, and input validation",
+      ],
+      stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "HTML5", "CSS3"],
     },
+
     {
       id: 2,
-      title: "7zz Gym",
+      title: "7zz Gym — Exercise Discovery & Fitness Platform",
       shortDescription:
-        "7zz Gym is a web app that offers gym exercises with muscle info, equipment, and tutorial videos using fitness and video APIs",
-      longDescription: `7zz Gym is a modern web application that helps users discover, learn, and perform gym exercises through a rich and intuitive interface. By integrating the ExerciseDB API and the YouTube Search & Download API, the platform provides detailed information about each exercise—including target muscles, equipment used, and visual demonstrations—along with tutorial videos and related workout suggestions based on muscle group or equipment type.`,
+        "Interactive fitness web app for discovering gym exercises with muscle info and video tutorials.",
       image: project2,
       videoUrl: "https://www.youtube.com/embed/fNZ7gIKB8RA",
       githubLink: "https://github.com/HamzaOuba00-1/gym-exercises",
+      descriptionLines: [
+        "Exercise catalog with muscle, equipment, and name-based filtering",
+        "Integration of ExerciseDB API and YouTube API for tutorials",
+        "Secure API handling with environment variables and input sanitization",
+      ],
+      stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
     },
+
     {
       id: 3,
-      title: "Time2Bus",
+      title: "Time2bUS — Smart Transport Reminder App",
       shortDescription:
-        "Time2Bus is a mobile app that sends smart, location-based reminders to help users catch their bus or train on time",
-      longDescription: `Time2Bus is a smart mobile app that helps users catch their bus or train on time by sending location-based reminders. It uses manual or AI-powered schedule input and calculates the distance to the transit stop to notify users exactly when to leave for a smooth and timely commute.`,
+        "Intelligent mobile app that helps users catch buses and trains on time using location and smart reminders.",
       image: project3,
       videoUrl: "https://www.youtube.com/embed/SsKLWGjl9ts",
       githubLink: "https://github.com/HamzaOuba00-1/time2bus",
+      descriptionLines: [
+        "Smart notifications based on schedule and distance to transit stop",
+        "Manual schedule input or AI-powered timetable scanning (OCR)",
+        "Geolocation and Google Maps integration for precise departure timing",
+      ],
+      stack: ["React Native", "TypeScript", "Node.js"],
     },
     {
       id: 4,
-      title: "VisiGen",
+      title: "VisiGen — AI Image Generation Platform",
       shortDescription:
-        "VisiGen is a web app that generates images from text prompts using OpenAI’s image generation API",
-      longDescription: `VisiGen is a web application that uses OpenAI's image generation API to create unique visuals from user-written text prompts. Designed for simplicity and creativity, the platform lets users type a description and instantly receive an AI-generated image, making it easy to bring ideas to life without any graphic design skills.`,
+        "Creative web app that generates AI images from text prompts using OpenAI.",
       image: project4,
       videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
       githubLink: "https://github.com/HamzaOuba00-1/img-gene",
+      descriptionLines: [
+        "Text-to-image generation using OpenAI image models",
+        "Prompt history with image preview and download support",
+        "Secure API usage with environment variables and input validation",
+      ],
+      stack: ["React", "JavaScript", "OpenAI API"],
     },
     {
       id: 5,
-      title: "Aladdin's Flight",
+      title: "Aladdin’s Flight — Arcade Web Game",
       shortDescription:
-        "Aladdin's Flight is a web game where players control Aladdin to dodge falling stones.",
-      longDescription: `Aladdin's Flight is a fast-paced web game where players guide Aladdin on his magic carpet, dodging falling stones using only the up and down arrow keys. With simple controls and an increasing level of difficulty, the game offers a fun and challenging experience that tests the player's reflexes and timing in a magical flying adventure.`,
+        "Fast-paced browser arcade game with simple controls and increasing difficulty.",
       image: project5,
       videoUrl: "https://www.youtube.com/embed/VgVPDWNedHY",
       githubLink: "https://github.com/HamzaOuba00-1/aladdin",
+      descriptionLines: [
+        "Simple one-touch gameplay using keyboard arrow controls",
+        "Real-time obstacle generation and collision detection",
+        "Score tracking with progressively increasing difficulty",
+      ],
+      stack: ["React", "CSS Animations", "Tailwind CSS"],
     },
     {
       id: 6,
-      title: "Human For You",
+      title: "Human For You — AI-Powered HR Analytics Platform",
       shortDescription:
-        "Human For You is an AI-driven HR platform that predicts employee attrition and delivers personalized, explainable retention strategies.",
-      longDescription: `Human For You is an AI-powered HR platform that predicts employee attrition risk using a machine learning model and provides clear, actionable retention strategies. By analyzing individual employee data and explaining the key factors behind each prediction with tools like SHAP, it helps HR professionals understand the causes of potential turnover and take personalized steps to reduce it effectively.`,
+        "AI-driven platform for predicting employee attrition and supporting HR decision-making.",
       image: project6,
       videoUrl: "https://www.youtube.com/embed/k6UBYujqfe8",
       githubLink: "https://github.com/HamzaOuba00-1",
+      descriptionLines: [
+        "Employee attrition prediction using machine learning models",
+        "Explainable AI with interpretable indicators for each prediction",
+        "Decision-support tool for HR professionals and managers",
+      ],
+      stack: ["Python", "Machine Learning", "React"],
     },
     {
       id: 7,
-      title: "CO2 Calculator",
+      title: "CO₂ Calculator — Personal Carbon Footprint Estimator",
       shortDescription:
-        "A web app that estimates daily carbon emissions through a lifestyle quiz and offers personalized tips to reduce the impact.",
-      longDescription: `CO2 Calculator is an interactive web application that estimates a user's daily carbon emissions based on answers to multiple-choice questions about their lifestyle. By calculating the total CO₂ output from habits like transport, energy use, and consumption, the app provides a personalized impact score and tailored advice to help users reduce their environmental footprint in meaningful ways.`,
+        "Interactive web app that estimates personal carbon footprint and suggests sustainable actions.",
       image: project7,
       videoUrl: "https://www.youtube.com/embed/KH2f9_I-jzk",
       githubLink: "https://github.com/HamzaOuba00-1/co2-calculator",
+      descriptionLines: [
+        "Interactive lifestyle questionnaire with real-time CO₂ estimation",
+        "Carbon footprint calculation based on daily habits and choices",
+        "Personalized recommendations to reduce environmental impact",
+      ],
+      stack: ["React", "JavaScript", "Tailwind CSS"],
     },
     {
       id: 8,
-      title: "TaskPilot",
+      title: "TaskPilot — Task & Productivity Manager",
       shortDescription:
-        "TaskPilot is a web app that helps users create, organize, and track tasks to boost productivity and manage daily workflows.",
-      longDescription: `TaskPilot is a web-based task management application that helps users organize and prioritize their daily activities with ease. Through a clean and intuitive interface, users can create tasks, set deadlines, assign priorities, and update statuses to stay focused and productive. Whether for personal use or team planning, the app simplifies task tracking and supports better time and workflow management.`,
+        "Modern task management web app focused on productivity and simplicity.",
       image: project8,
       videoUrl: "https://www.youtube.com/embed/MwCP3Gwdb98",
       githubLink: "https://github.com/HamzaOuba00-1/Task-Pilot",
+      descriptionLines: [
+        "Task creation with priorities, deadlines, and status tracking",
+        "Productivity-focused workflow with filters and categorization",
+        "Clean, minimal, and fully responsive user interface",
+      ],
+      stack: ["React", "Tailwind CSS"],
     },
   ];
 
-  // InView séparés
-  const { ref: titleRef, inView: titleInView } = useInView({
-    triggerOnce: true,
-    threshold: 0,
-  });
-  const { ref: textRef, inView: textInView } = useInView({
-    triggerOnce: true,
-    threshold: 0,
-  });
-  const { ref: companiesRef, inView: companiesInView } = useInView({
-    triggerOnce: true,
-    threshold: 0,
-  });
-
-  const openModal = (project) => {
-    setSelectedProject(project);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
-
   return (
-    <div id="work" className="py-12 bg-[#0e0c1e]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* TITRE */}
+    <div id="work" className="py-16 bg-[#0e0c1e]">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        {/* Title */}
         <motion.h2
-          ref={titleRef}
-          initial={{ opacity: 0, y: 100 }}
-          animate={titleInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-4xl text-white underline font-bold text-center mb-12"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-4xl text-white underline font-bold mb-6"
         >
           Featured Projects
         </motion.h2>
 
-        {/* TEXTE INTRO */}
         <motion.p
-          ref={textRef}
-          initial={{ opacity: 0, y: 100 }}
-          animate={textInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="mb-12 text-gray-400 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+          className="mb-12 text-gray-400"
         >
           A visual tour through my most exciting work.
         </motion.p>
 
-        {/* PROJETS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const ref = React.createRef();
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const inView = useInView({ triggerOnce: true, threshold: 0.5 });
-            return (
-              <motion.div
-                key={project.id}
-                ref={ref}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
-                className="bg-gray-900 shadow-lg rounded-lg overflow-hidden"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl text-white font-semibold mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 mb-4">
-                    {project.shortDescription}
-                  </p>
-                  <button
-                    onClick={() => openModal(project)}
-                    className="border-2 border-purple-500 text-purple-500 px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition"
-                  >
-                    Details
-                  </button>
-                </div>
-              </motion.div>
-            );
-          })}
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 + index * 0.05, duration: 0.4 }}
+              className="bg-[#1c1a2b] rounded-lg overflow-hidden shadow-lg 
+                           hover:shadow-lg hover:shadow-purple-500
+                           transition-shadow duration-300"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6 text-left">
+                <h3 className="text-xl text-white font-semibold mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-slate-400 mb-4">
+                  {project.shortDescription}
+                </p>
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="border-2 border-purple-500 text-purple-500 px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition"
+                >
+                  Details
+                </button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
-      {/* COMPANIES */}
       <motion.div
-        ref={companiesRef}
-        initial={{ opacity: 0, y: 100 }}
-        animate={companiesInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 0.2, duration: 0.3 }}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.4 }}
       >
         <Companies />
       </motion.div>
 
-      {/* MODAL */}
-      {selectedProject && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
-          onClick={closeModal}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative bg-[#0e0c1e] text-white rounded-lg w-11/12 sm:w-3/4 md:w-1/2 max-h-[90vh] overflow-auto p-8 myCustomScroll"
+      {/* ✅ MODAL  */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+            onClick={() => setSelectedProject(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 text-2xl font-bold hover:text-pink-400"
+            <motion.div
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, y: 24, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 24, scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              className="
+          w-full max-w-5xl
+          max-h-[95vh]
+          rounded-2xl
+          border border-white/10
+          bg-[#0b0820]
+          shadow-2xl
+          flex flex-col
+        "
             >
-              x
-            </button>
+              {/* Header (fixed) */}
+              <div className="flex items-start justify-between px-8 pt-7 shrink-0">
+                <h2 className="text-xl md:text-2xl font-semibold text-white">
+                  {selectedProject.title}
+                </h2>
 
-            <h2 className="text-2xl font-bold mb-6">{selectedProject.title}</h2>
+                <button
+                  aria-label="Close"
+                  className="text-white/70 hover:text-white text-2xl leading-none"
+                  onClick={() => setSelectedProject(null)}
+                >
+                  ×
+                </button>
+              </div>
 
-            <div className="mb-6 rounded-lg overflow-hidden w-full aspect-video">
-              <iframe
-                className="w-full h-full"
-                src={selectedProject.videoUrl}
-                title="Project demo video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              />
-            </div>
+              {/* Body (scrollable) */}
+              <div className="px-8 pb-8 pt-5 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+                {/* Thumbnail / Iframe frame */}
+                <div className="w-3/4 mx-auto h-auto rounded-2xl bg-white/5 p-4 border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_25px_80px_rgba(0,0,0,0.55)]">
+                  <div className="aspect-video overflow-hidden rounded-xl bg-black/40">
+                    <iframe
+                      className="w-full h-full"
+                      src={selectedProject.videoUrl}
+                      title="Project demo"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
 
-            <h3 className="text-xl font-semibold mb-2">Description</h3>
-            <p className="text-slate-300 mb-6">
-              {selectedProject.longDescription}
-            </p>
+                {/* Description */}
+                <div className="mt-6">
+                  <h3 className="text-white font-semibold">Description</h3>
 
-            <a
-              href={selectedProject.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-500 border-b border-purple-500 hover:text-purple-300"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      )}
+                  {(() => {
+                    const lines =
+                      selectedProject.descriptionLines ??
+                      selectedProject.longDescription
+                        .split(".")
+                        .map((s) => s.trim())
+                        .filter(Boolean)
+                        .slice(0, 6);
+
+                    return (
+                      <ul className="mt-3 list-disc pl-5 space-y-2 text-sm text-slate-300">
+                        {lines.map((line, i) => (
+                          <li key={i}>{line}</li>
+                        ))}
+                      </ul>
+                    );
+                  })()}
+                </div>
+
+                {/* Stack */}
+                {selectedProject.stack?.length ? (
+                  <div className="mt-6">
+                    <h3 className="text-white font-semibold">Stack</h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {selectedProject.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs text-slate-200"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {/* GitHub link */}
+                <div className="mt-7">
+                  <a
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white underline underline-offset-4 hover:text-purple-300"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

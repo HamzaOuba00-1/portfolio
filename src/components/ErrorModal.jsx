@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import icon from '../assets/error.png';
 const ErrorModal = ({ visible, onClose }) => {
