@@ -2,8 +2,10 @@ import About from "./components/About"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
-import Work from "./components/Work"
+import Work from "./components/Projects"
 import Contact from "./components/Contact"
+import Certificates from "./components/Certificates"
+import Companies from "./components/Technologies"
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <About/>
       <Services/>
       <Work/>
+      <Companies/>
+      <Certificates />
       <Contact/>
     </div>
   )
