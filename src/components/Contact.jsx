@@ -2,8 +2,8 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import SuccessModal from "./SuccessModal";
-import ErrorModal from "./ErrorModal";
+import SuccessModal from "./model/SuccessModal";
+import ErrorModal from "./model/ErrorModal";
 
 const Contact = () => {
   const form = useRef();
