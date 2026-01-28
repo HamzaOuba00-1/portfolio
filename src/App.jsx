@@ -1,7 +1,7 @@
 import About from "./components/About"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
-import Services from "./components/Services"
+import Interets from "./components/Interests"
 import Work from "./components/Projects"
 import Contact from "./components/Contact"
 import Certificates from "./components/Certificates"
@@ -13,7 +13,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <About/>
-      <Services/>
+      <Interets/>
       <Work/>
       <Companies/>
       <Certificates />
