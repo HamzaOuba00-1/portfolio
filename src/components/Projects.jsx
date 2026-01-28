@@ -216,7 +216,7 @@ const Work = () => {
 
 
 
-      {/* ✅ MODAL  */}
+      {/* MODAL  */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div

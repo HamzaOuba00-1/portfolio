@@ -46,7 +46,6 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* CTA */}
           <a
             href="/hamza_ouba_resume.pdf"
             download
@@ -101,7 +100,7 @@ const Navbar = () => {
             ))}
 
             <a
-              href="/oubaCV.pdf"
+              href="/hamza_ouba_resume.pdf"
               download
               className="inline-block mt-4 px-5 py-2 rounded-full
                          bg-purple-500 text-white text-sm

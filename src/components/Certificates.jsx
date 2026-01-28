@@ -91,7 +91,7 @@ const Certificates = () => {
         </div>
       </div>
 
-      {/* ✅ MODAL — inspired by Work */}
+      {/* MODAL*/}
       <AnimatePresence>
         {selectedCert && (
           <motion.div
@@ -160,7 +160,7 @@ const Certificates = () => {
                 </div>
               </div>
 
-              {/* Body (NO SCROLL) */}
+              {/* Body*/}
               <div className="flex-1 flex items-center justify-center px-8 pb-8">
                 <div
                   className="

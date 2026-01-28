@@ -2,7 +2,7 @@
 
 
 
-import aboutImg from '../assets/aboutImg.png'
+import aboutImg from '../assets/me/aboutme.png'
 import { motion } from 'framer-motion'
 
 const fadeUp = {

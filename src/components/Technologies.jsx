@@ -2,22 +2,16 @@ import { motion } from "framer-motion"
 
 const Companies = () => {
   const technologies = [
-    // Languages
     "C", "C#", "Java", "JavaScript", "TypeScript", "PHP", "Python", "SQL",
 
-    // Front-end
     "HTML", "CSS", "Tailwind CSS", "React", "Angular", "Vue",
 
-    // Back-end
     "Node.js", "Spring Boot", ".NET", "Laravel",
 
-    // Mobile
     "React Native",
 
-    // Cloud & CI/CD
     "GitHub Actions", "GitLab CI/CD",
 
-    // Tools & Design
     "Docker", "Git", "Maven",
     "Figma", "Canva", "Illustrator", "Photoshop",
   ]
@@ -66,7 +60,6 @@ const Companies = () => {
             Technologies I’ve Worked With
           </motion.h2>
 
-          {/* Row 1 */}
           <div className="overflow-hidden w-full">
             <motion.div
               variants={marqueeLeft}
@@ -84,7 +77,6 @@ const Companies = () => {
             </motion.div>
           </div>
 
-          {/* Row 2 */}
           <div className="overflow-hidden w-full mt-6">
             <motion.div
               variants={marqueeRight}

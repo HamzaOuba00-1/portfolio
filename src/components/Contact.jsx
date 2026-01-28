@@ -2,8 +2,8 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import SuccessModal from "./model/SuccessModal";
-import ErrorModal from "./model/ErrorModal";
+import SuccessModal from "../ui/modals/SuccessModal";
+import ErrorModal from "../ui/modals/ErrorModal";
 
 const Contact = () => {
   const form = useRef();
@@ -194,7 +194,7 @@ const Contact = () => {
         transition={{ delay: 0.6, duration: 0.4 }}
         className="mt-24 flex flex-col sm:flex-row justify-between items-center gap-4 p-5 border-t border-purple-500"
       >
-        <p>© 2025. Made with 🤍</p>
+        <p>© {new Date().getFullYear()}. Made with 🤍</p>
         <p>OUBA Hamza</p>
         <div className="flex space-x-4">
           <a

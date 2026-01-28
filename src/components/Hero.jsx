@@ -1,4 +1,4 @@
-import avatar from '../assets/avatar.png'
+import avatar from '../assets/me/avatar.png'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 
