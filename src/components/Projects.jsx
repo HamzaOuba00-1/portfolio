@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import project1 from "../assets/projects/7.png";
@@ -11,156 +11,173 @@ import project7 from "../assets/projects/2.png";
 import project8 from "../assets/projects/8.png";
 import project9 from "../assets/projects/9.png";
 
+const INITIAL_VISIBLE = 9;
+const LOAD_MORE_STEP = 6;
+
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
-  const projects = [
-    {
-      id: 9,
-      title: "HotelFlow — Hotel Management & Booking Platform",
-      shortDescription:
-        "Full-stack hotel management and online booking platform with role-based access.",
-      image: project9,
-      videoUrl: "https://www.youtube.com/embed/beIzHXRxwyo",
-      githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
-      descriptionLines: [
-        "HotelFlow is a modern full-stack web application designed for hotel management and online booking",
-        "Multi-role platform: Visitor, Manager, Employee, and Client",
-        "Providing secure and user-friendly public booking interface",
-        "Hotel & room management, reservations, planning, attendance, and internal messaging",
-        "JWT-based authentication with role-based authorization",
-      ],
-      stack: ["Java Spring Boot", "React", "PostgreSQL"],
-    },
+  const projects = useMemo(
+    () => [
+      
+      {
+        id: 9,
+        title: "HotelFlow — Hotel Management & Booking Platform",
+        shortDescription:
+          "Full-stack hotel management and online booking platform with role-based access.",
+        image: project9,
+        videoUrl: "https://www.youtube.com/embed/beIzHXRxwyo",
+        githubLink: "https://github.com/HamzaOuba00-1/hotelmanager",
+        descriptionLines: [
+          "HotelFlow is a modern full-stack web application designed for hotel management and online booking",
+          "Multi-role platform: Visitor, Manager, Employee, and Client",
+          "Providing secure and user-friendly public booking interface",
+          "Hotel & room management, reservations, planning, attendance, and internal messaging",
+          "JWT-based authentication with role-based authorization",
+        ],
+        stack: ["Java Spring Boot", "React", "PostgreSQL"],
+      },
+      {
+        id: 1,
+        title: "Azalidor — E-commerce Platform",
+        shortDescription:
+          "Modern e-commerce platform with a full admin dashboard and secure shopping experience.",
+        image: project1,
+        videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
+        githubLink: "https://github.com/HamzaOuba00-1/Azalidor-shop",
+        descriptionLines: [
+          "Complete furniture e-commerce experience with wishlist and order tracking",
+          "Admin dashboard for brands, categories, products, orders, users, and coupons",
+          "Secure authentication, role-based access control, and input validation",
+        ],
+        stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "HTML5", "CSS3"],
+      },
+      {
+        id: 2,
+        title: "7zz Gym — Exercise Discovery & Fitness Platform",
+        shortDescription:
+          "Interactive fitness web app for discovering gym exercises with muscle info and video tutorials.",
+        image: project2,
+        videoUrl: "https://www.youtube.com/embed/fNZ7gIKB8RA",
+        githubLink: "https://github.com/HamzaOuba00-1/gym-exercises",
+        descriptionLines: [
+          "Exercise catalog with muscle, equipment, and name-based filtering",
+          "Integration of ExerciseDB API and YouTube API for tutorials",
+          "Secure API handling with environment variables and input sanitization",
+        ],
+        stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
+      },
+      {
+        id: 3,
+        title: "Time2bUS — Smart Transport Reminder App",
+        shortDescription:
+          "Intelligent mobile app that helps users catch buses and trains on time using location and smart reminders.",
+        image: project3,
+        videoUrl: "https://www.youtube.com/embed/SsKLWGjl9ts",
+        githubLink: "https://github.com/HamzaOuba00-1/time2bus",
+        descriptionLines: [
+          "Smart notifications based on schedule and distance to transit stop",
+          "Manual schedule input or AI-powered timetable scanning (OCR)",
+          "Geolocation and Google Maps integration for precise departure timing",
+        ],
+        stack: ["React Native", "TypeScript", "Node.js"],
+      },
+      {
+        id: 4,
+        title: "VisiGen — AI Image Generation Platform",
+        shortDescription:
+          "Creative web app that generates AI images from text prompts using OpenAI.",
+        image: project4,
+        videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
+        githubLink: "https://github.com/HamzaOuba00-1/img-gene",
+        descriptionLines: [
+          "Text-to-image generation using OpenAI image models",
+          "Prompt history with image preview and download support",
+          "Secure API usage with environment variables and input validation",
+        ],
+        stack: ["React", "JavaScript", "OpenAI API"],
+      },
+      {
+        id: 5,
+        title: "Aladdin’s Flight — Arcade Web Game",
+        shortDescription:
+          "Fast-paced browser arcade game with simple controls and increasing difficulty.",
+        image: project5,
+        videoUrl: "https://www.youtube.com/embed/VgVPDWNedHY",
+        githubLink: "https://github.com/HamzaOuba00-1/aladdin",
+        descriptionLines: [
+          "Simple one-touch gameplay using keyboard arrow controls",
+          "Real-time obstacle generation and collision detection",
+          "Score tracking with progressively increasing difficulty",
+        ],
+        stack: ["React", "CSS Animations", "Tailwind CSS"],
+      },
+      {
+        id: 6,
+        title: "Human For You — AI-Powered HR Analytics Platform",
+        shortDescription:
+          "AI-driven platform for predicting employee attrition and supporting HR decision-making.",
+        image: project6,
+        videoUrl: "https://www.youtube.com/embed/k6UBYujqfe8",
+        githubLink: "https://github.com/HamzaOuba00-1",
+        descriptionLines: [
+          "Employee attrition prediction using machine learning models",
+          "Explainable AI with interpretable indicators for each prediction",
+          "Decision-support tool for HR professionals and managers",
+        ],
+        stack: ["Python", "Machine Learning", "React"],
+      },
+      {
+        id: 7,
+        title: "CO₂ Calculator — Personal Carbon Footprint Estimator",
+        shortDescription:
+          "Interactive web app that estimates personal carbon footprint and suggests sustainable actions.",
+        image: project7,
+        videoUrl: "https://www.youtube.com/embed/KH2f9_I-jzk",
+        githubLink: "https://github.com/HamzaOuba00-1/co2-calculator",
+        descriptionLines: [
+          "Interactive lifestyle questionnaire with real-time CO₂ estimation",
+          "Carbon footprint calculation based on daily habits and choices",
+          "Personalized recommendations to reduce environmental impact",
+        ],
+        stack: ["React", "JavaScript", "Tailwind CSS"],
+      },
+      {
+        id: 8,
+        title: "TaskPilot — Task & Productivity Manager",
+        shortDescription:
+          "Modern task management web app focused on productivity and simplicity.",
+        image: project8,
+        videoUrl: "https://www.youtube.com/embed/MwCP3Gwdb98",
+        githubLink: "https://github.com/HamzaOuba00-1/Task-Pilot",
+        descriptionLines: [
+          "Task creation with priorities, deadlines, and status tracking",
+          "Productivity-focused workflow with filters and categorization",
+          "Clean, minimal, and fully responsive user interface",
+        ],
+        stack: ["React", "Tailwind CSS"],
+      },
+    ],
+    [],
+  );
 
-    {
-      id: 1,
-      title: "Azalidor — E-commerce Platform",
-      shortDescription:
-        "Modern e-commerce platform with a full admin dashboard and secure shopping experience.",
-      image: project1,
-      videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
-      githubLink: "https://github.com/HamzaOuba00-1/Azalidor-shop",
-      descriptionLines: [
-        "Complete furniture e-commerce experience with wishlist and order tracking",
-        "Admin dashboard for brands, categories, products, orders, users, and coupons",
-        "Secure authentication, role-based access control, and input validation",
-      ],
-      stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "HTML5", "CSS3"],
-    },
+  const visibleProjects = useMemo(
+    () => projects.slice(0, visibleCount),
+    [projects, visibleCount],
+  );
 
-    {
-      id: 2,
-      title: "7zz Gym — Exercise Discovery & Fitness Platform",
-      shortDescription:
-        "Interactive fitness web app for discovering gym exercises with muscle info and video tutorials.",
-      image: project2,
-      videoUrl: "https://www.youtube.com/embed/fNZ7gIKB8RA",
-      githubLink: "https://github.com/HamzaOuba00-1/gym-exercises",
-      descriptionLines: [
-        "Exercise catalog with muscle, equipment, and name-based filtering",
-        "Integration of ExerciseDB API and YouTube API for tutorials",
-        "Secure API handling with environment variables and input sanitization",
-      ],
-      stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
-    },
+  const canLoadMore = visibleCount < projects.length;
 
-    {
-      id: 3,
-      title: "Time2bUS — Smart Transport Reminder App",
-      shortDescription:
-        "Intelligent mobile app that helps users catch buses and trains on time using location and smart reminders.",
-      image: project3,
-      videoUrl: "https://www.youtube.com/embed/SsKLWGjl9ts",
-      githubLink: "https://github.com/HamzaOuba00-1/time2bus",
-      descriptionLines: [
-        "Smart notifications based on schedule and distance to transit stop",
-        "Manual schedule input or AI-powered timetable scanning (OCR)",
-        "Geolocation and Google Maps integration for precise departure timing",
-      ],
-      stack: ["React Native", "TypeScript", "Node.js"],
-    },
-    {
-      id: 4,
-      title: "VisiGen — AI Image Generation Platform",
-      shortDescription:
-        "Creative web app that generates AI images from text prompts using OpenAI.",
-      image: project4,
-      videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
-      githubLink: "https://github.com/HamzaOuba00-1/img-gene",
-      descriptionLines: [
-        "Text-to-image generation using OpenAI image models",
-        "Prompt history with image preview and download support",
-        "Secure API usage with environment variables and input validation",
-      ],
-      stack: ["React", "JavaScript", "OpenAI API"],
-    },
-    {
-      id: 5,
-      title: "Aladdin’s Flight — Arcade Web Game",
-      shortDescription:
-        "Fast-paced browser arcade game with simple controls and increasing difficulty.",
-      image: project5,
-      videoUrl: "https://www.youtube.com/embed/VgVPDWNedHY",
-      githubLink: "https://github.com/HamzaOuba00-1/aladdin",
-      descriptionLines: [
-        "Simple one-touch gameplay using keyboard arrow controls",
-        "Real-time obstacle generation and collision detection",
-        "Score tracking with progressively increasing difficulty",
-      ],
-      stack: ["React", "CSS Animations", "Tailwind CSS"],
-    },
-    {
-      id: 6,
-      title: "Human For You — AI-Powered HR Analytics Platform",
-      shortDescription:
-        "AI-driven platform for predicting employee attrition and supporting HR decision-making.",
-      image: project6,
-      videoUrl: "https://www.youtube.com/embed/k6UBYujqfe8",
-      githubLink: "https://github.com/HamzaOuba00-1",
-      descriptionLines: [
-        "Employee attrition prediction using machine learning models",
-        "Explainable AI with interpretable indicators for each prediction",
-        "Decision-support tool for HR professionals and managers",
-      ],
-      stack: ["Python", "Machine Learning", "React"],
-    },
-    {
-      id: 7,
-      title: "CO₂ Calculator — Personal Carbon Footprint Estimator",
-      shortDescription:
-        "Interactive web app that estimates personal carbon footprint and suggests sustainable actions.",
-      image: project7,
-      videoUrl: "https://www.youtube.com/embed/KH2f9_I-jzk",
-      githubLink: "https://github.com/HamzaOuba00-1/co2-calculator",
-      descriptionLines: [
-        "Interactive lifestyle questionnaire with real-time CO₂ estimation",
-        "Carbon footprint calculation based on daily habits and choices",
-        "Personalized recommendations to reduce environmental impact",
-      ],
-      stack: ["React", "JavaScript", "Tailwind CSS"],
-    },
-    {
-      id: 8,
-      title: "TaskPilot — Task & Productivity Manager",
-      shortDescription:
-        "Modern task management web app focused on productivity and simplicity.",
-      image: project8,
-      videoUrl: "https://www.youtube.com/embed/MwCP3Gwdb98",
-      githubLink: "https://github.com/HamzaOuba00-1/Task-Pilot",
-      descriptionLines: [
-        "Task creation with priorities, deadlines, and status tracking",
-        "Productivity-focused workflow with filters and categorization",
-        "Clean, minimal, and fully responsive user interface",
-      ],
-      stack: ["React", "Tailwind CSS"],
-    },
-  ];
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => Math.min(prev + LOAD_MORE_STEP, projects.length));
+  };
+
+
 
   return (
     <div id="work" className="pt-16 pb-4 bg-[#0e0c1e]">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -180,20 +197,21 @@ const Work = () => {
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.05, duration: 0.4 }}
               className="bg-[#1c1a2b] rounded-lg overflow-hidden shadow-lg 
-                           hover:shadow-lg hover:shadow-purple-500
-                           transition-shadow duration-300"
+                         hover:shadow-lg hover:shadow-purple-500
+                         transition-shadow duration-300"
             >
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
+                loading="lazy"
               />
               <div className="p-6 text-left">
                 <h3 className="text-xl text-white font-semibold mb-2">
@@ -212,11 +230,53 @@ const Work = () => {
             </motion.div>
           ))}
         </div>
+
+        <AnimatePresence>
+          {projects.length > INITIAL_VISIBLE && canLoadMore && (
+            <motion.div
+              className="mt-10 flex justify-center"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <button
+                onClick={handleLoadMore}
+                className="
+                  group relative overflow-hidden
+                  rounded-full
+                  border border-purple-500/70
+                  bg-white/5
+                  px-7 py-3
+                  text-sm font-semibold text-white
+                  backdrop-blur-xl
+                  shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+                  transition
+                  hover:border-purple-400
+                  hover:bg-white/10
+                  focus:outline-none
+                  focus:ring-2 focus:ring-purple-500/60
+                  focus:ring-offset-0
+                "
+              >
+                <span
+                  className="
+                    pointer-events-none absolute -inset-x-10 -inset-y-8
+                    translate-x-[-60%] rotate-12
+                    bg-gradient-to-r from-transparent via-white/10 to-transparent
+                    opacity-0
+                    transition duration-500
+                    group-hover:translate-x-[60%]
+                    group-hover:opacity-100
+                  "
+                />
+                Load more
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-
-
-      {/* MODAL  */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -233,16 +293,15 @@ const Work = () => {
               exit={{ opacity: 0, y: 24, scale: 0.98 }}
               transition={{ duration: 0.2 }}
               className="
-          w-full max-w-5xl
-          max-h-[95vh]
-          rounded-2xl
-          border border-white/10
-          bg-[#0b0820]
-          shadow-2xl
-          flex flex-col
-        "
+                w-full max-w-5xl
+                max-h-[95vh]
+                rounded-2xl
+                border border-white/10
+                bg-[#0b0820]
+                shadow-2xl
+                flex flex-col
+              "
             >
-              {/* Header (fixed) */}
               <div className="flex items-start justify-between px-8 pt-7 shrink-0">
                 <h2 className="text-xl md:text-2xl font-semibold text-white">
                   {selectedProject.title}
@@ -257,9 +316,8 @@ const Work = () => {
                 </button>
               </div>
 
-              {/* Body (scrollable) */}
+              {/* Body */}
               <div className="px-8 pb-8 pt-5 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-                {/* Thumbnail / Iframe frame */}
                 <div className="w-3/4 mx-auto h-auto rounded-2xl bg-white/5 p-4 border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_25px_80px_rgba(0,0,0,0.55)]">
                   <div className="aspect-video overflow-hidden rounded-xl bg-black/40">
                     <iframe
@@ -272,7 +330,6 @@ const Work = () => {
                   </div>
                 </div>
 
-                {/* Description */}
                 <div className="mt-6">
                   <h3 className="text-white font-semibold">Description</h3>
 
@@ -280,10 +337,11 @@ const Work = () => {
                     const lines =
                       selectedProject.descriptionLines ??
                       selectedProject.longDescription
-                        .split(".")
+                        ?.split(".")
                         .map((s) => s.trim())
                         .filter(Boolean)
-                        .slice(0, 6);
+                        .slice(0, 6) ??
+                      [];
 
                     return (
                       <ul className="mt-3 list-disc pl-5 space-y-2 text-sm text-slate-300">
@@ -295,7 +353,6 @@ const Work = () => {
                   })()}
                 </div>
 
-                {/* Stack */}
                 {selectedProject.stack?.length ? (
                   <div className="mt-6">
                     <h3 className="text-white font-semibold">Stack</h3>
@@ -312,7 +369,6 @@ const Work = () => {
                   </div>
                 ) : null}
 
-                {/* GitHub link */}
                 <div className="mt-7">
                   <a
                     href={selectedProject.githubLink}
