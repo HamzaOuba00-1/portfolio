@@ -10,6 +10,7 @@ import project6 from "../assets/projects/6.png";
 import project7 from "../assets/projects/2.png";
 import project8 from "../assets/projects/8.png";
 import project9 from "../assets/projects/9.png";
+import project10 from "../assets/projects/10.png";
 
 const INITIAL_VISIBLE = 9;
 const LOAD_MORE_STEP = 6;
@@ -20,6 +21,25 @@ const Work = () => {
 
   const projects = useMemo(
     () => [
+
+      {
+        id: 10,
+        title: "Perfuma — Smart Fragrance Composition App",
+        shortDescription:
+          "Full-stack app that automatically generates balanced perfume formulas with professional PDF export.",
+        image: project10,
+        videoUrl: "https://www.youtube.com/embed/EwiQrWufMAE",
+        githubLink: "https://github.com/HamzaOuba00-1/perfume-generator",
+        descriptionLines: [
+          "Automatic perfume formula generation based on real fragrance composition rules",
+          "Guided essential oil selection following the olfactory pyramid structure",
+          "Premium PDF recipe sheet generation with dilution tables",
+          "Admin dashboard for CRUD management of essential oils with secure authentication",
+          "Clean full-stack architecture with Spring Boot backend and Angular frontend",
+        ],
+        stack: ["Spring Boot", "Java", "Angular", "Docker"],
+      },
+
       
       {
         id: 9,
@@ -38,23 +58,9 @@ const Work = () => {
         ],
         stack: ["Java Spring Boot", "React", "PostgreSQL"],
       },
+      
       {
-        id: 1,
-        title: "Azalidor — E-commerce Platform",
-        shortDescription:
-          "Modern e-commerce platform with a full admin dashboard and secure shopping experience.",
-        image: project1,
-        videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
-        githubLink: "https://github.com/HamzaOuba00-1/Azalidor-shop",
-        descriptionLines: [
-          "Complete furniture e-commerce experience with wishlist and order tracking",
-          "Admin dashboard for brands, categories, products, orders, users, and coupons",
-          "Secure authentication, role-based access control, and input validation",
-        ],
-        stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "HTML5", "CSS3"],
-      },
-      {
-        id: 2,
+        id: 8,
         title: "7zz Gym — Exercise Discovery & Fitness Platform",
         shortDescription:
           "Interactive fitness web app for discovering gym exercises with muscle info and video tutorials.",
@@ -68,8 +74,39 @@ const Work = () => {
         ],
         stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
       },
+      
       {
-        id: 3,
+        id: 7,
+        title: "VisiGen — AI Image Generation Platform",
+        shortDescription:
+          "Creative web app that generates AI images from text prompts using OpenAI.",
+        image: project4,
+        videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
+        githubLink: "https://github.com/HamzaOuba00-1/img-gene",
+        descriptionLines: [
+          "Text-to-image generation using OpenAI image models",
+          "Prompt history with image preview and download support",
+          "Secure API usage with environment variables and input validation",
+        ],
+        stack: ["React", "JavaScript", "OpenAI API"],
+      },
+      {
+        id: 6,
+        title: "Internship Demo : E-commerce Platform",
+        shortDescription:
+          "Modern e-commerce platform with a full admin dashboard and secure shopping experience.",
+        image: project1,
+        videoUrl: "https://www.youtube.com/embed/JJYNM-GPZaU",
+        githubLink: "https://github.com/HamzaOuba00-1",
+        descriptionLines: [
+          "Complete furniture e-commerce experience with wishlist and order tracking",
+          "Admin dashboard for brands, categories, products, orders, users, and coupons",
+          "Secure authentication, role-based access control, and input validation",
+        ],
+        stack: ["Laravel", "PHP", "MySQL", "Bootstrap", "HTML5", "CSS3"],
+      },
+      {
+        id: 5,
         title: "Time2bUS — Smart Transport Reminder App",
         shortDescription:
           "Intelligent mobile app that helps users catch buses and trains on time using location and smart reminders.",
@@ -85,21 +122,6 @@ const Work = () => {
       },
       {
         id: 4,
-        title: "VisiGen — AI Image Generation Platform",
-        shortDescription:
-          "Creative web app that generates AI images from text prompts using OpenAI.",
-        image: project4,
-        videoUrl: "https://www.youtube.com/embed/5eT4PGPx3kU",
-        githubLink: "https://github.com/HamzaOuba00-1/img-gene",
-        descriptionLines: [
-          "Text-to-image generation using OpenAI image models",
-          "Prompt history with image preview and download support",
-          "Secure API usage with environment variables and input validation",
-        ],
-        stack: ["React", "JavaScript", "OpenAI API"],
-      },
-      {
-        id: 5,
         title: "Aladdin’s Flight — Arcade Web Game",
         shortDescription:
           "Fast-paced browser arcade game with simple controls and increasing difficulty.",
@@ -114,7 +136,7 @@ const Work = () => {
         stack: ["React", "CSS Animations", "Tailwind CSS"],
       },
       {
-        id: 6,
+        id: 3,
         title: "Human For You — AI-Powered HR Analytics Platform",
         shortDescription:
           "AI-driven platform for predicting employee attrition and supporting HR decision-making.",
@@ -129,7 +151,7 @@ const Work = () => {
         stack: ["Python", "Machine Learning", "React"],
       },
       {
-        id: 7,
+        id: 2,
         title: "CO₂ Calculator — Personal Carbon Footprint Estimator",
         shortDescription:
           "Interactive web app that estimates personal carbon footprint and suggests sustainable actions.",
@@ -144,7 +166,7 @@ const Work = () => {
         stack: ["React", "JavaScript", "Tailwind CSS"],
       },
       {
-        id: 8,
+        id: 1,
         title: "TaskPilot — Task & Productivity Manager",
         shortDescription:
           "Modern task management web app focused on productivity and simplicity.",
