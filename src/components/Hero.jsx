@@ -5,7 +5,6 @@ import { Link } from 'react-scroll'
 const Hero = () => {
   return (
     <div className="text-white py-10">
-
       <motion.img
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -19,9 +18,8 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="container mx-auto text-center"
+        className="container mx-auto text-center px-4"
       >
-
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,14 +47,14 @@ const Hero = () => {
           Passionate about software and intelligent systems.
         </motion.p>
 
-        <div className="flex justify-center space-x-4 mb-10">
-
+        {/* Primary CTA */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
           {/* My Work */}
           <motion.button
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            className="bg-purple-500 text-white px-6 py-3 rounded-full"
+            className="bg-purple-500 hover:bg-purple-600 transition text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
             <Link to="work" smooth duration={500} offset={-70}>
               My Work
@@ -71,12 +69,39 @@ const Hero = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            className="text-white border border-white px-6 py-3 rounded-full inline-flex items-center"
+            className="text-white border border-white hover:bg-white hover:text-black transition px-6 py-3 rounded-full inline-flex items-center justify-center w-full sm:w-auto"
           >
             My GitHub →
           </motion.a>
-
         </div>
+
+        {/* Secondary section: My Learning Space */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.65, duration: 0.4 }}
+          className="mx-auto max-w-xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur px-5 py-4"
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-left">
+              <div className="text-sm font-semibold text-white/90">space-H</div>
+              <div className="text-sm text-gray-400">
+                space-H is my structured learning laboratory.
+              </div>
+            </div>
+
+            <motion.a
+              href="https://spaceh.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:opacity-95 transition inline-flex items-center justify-center"
+            >
+              Visit space-H
+            </motion.a>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   )
