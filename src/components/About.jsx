@@ -77,7 +77,7 @@ const About = () => {
             transition={{ duration: 0.4 }}
             className="md:w-1/2 text-gray-400 px-4 md:px-0 text-base sm:text-lg md:text-xl"
           >
-          Hey! I am Hamza, Fourth-year IT engineering student at CESI Nice, an innovative institution 
+          Hey! I am Hamza, Fourth-year IT engineering student at CESI, an innovative institution 
           recognized for its forward-thinking and project-based learning.
           Focused on software engineering. Passionate about building reliable and maintainable applications, 
           I enjoy transforming complex ideas into efficient, production-ready solutions.
