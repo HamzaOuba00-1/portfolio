@@ -11,6 +11,7 @@ import project7 from "../assets/projects/2.png";
 import project8 from "../assets/projects/8.png";
 import project9 from "../assets/projects/9.png";
 import project10 from "../assets/projects/10.png";
+import project11 from "../assets/projects/11.png";
 
 const INITIAL_VISIBLE = 9;
 const LOAD_MORE_STEP = 6;
@@ -21,6 +22,33 @@ const Work = () => {
 
   const projects = useMemo(
     () => [
+      {
+        id: 11,
+        title: "Full DevOps Kubernetes Project - Task Manager Platform Demo",
+        shortDescription:
+          "Production-like full-stack platform deployed on Kubernetes with CI/CD, Ingress, and observability (Prometheus + Grafana).",
+        image: project11,
+        videoUrl: null,
+        githubLink: "https://github.com/HamzaOuba00-1/task-manager-platform",
+        descriptionLines: [
+          "Full-stack application deployed on Kubernetes (k3d) with real production architecture",
+          "Angular frontend + Spring Boot backend + PostgreSQL database",
+          "NGINX Ingress routing with custom domain (task-manager.local)",
+          "CI/CD pipeline with GitHub Actions (build, Docker, push)",
+          "Monitoring stack with Prometheus + Grafana dashboards",
+          "Kubernetes resources: Deployments, Services, ConfigMaps, Secrets, ServiceMonitor",
+        ],
+        stack: [
+          "Kubernetes",
+          "Docker",
+          "Spring Boot",
+          "Angular",
+          "PostgreSQL",
+          "Prometheus",
+          "Grafana",
+          "GitHub Actions",
+        ],
+      },
 
       {
         id: 10,
@@ -40,7 +68,6 @@ const Work = () => {
         stack: ["Spring Boot", "Java", "Angular", "Docker"],
       },
 
-      
       {
         id: 9,
         title: "HotelFlow — Hotel Management & Booking Platform",
@@ -58,7 +85,7 @@ const Work = () => {
         ],
         stack: ["Java Spring Boot", "React", "PostgreSQL"],
       },
-      
+
       {
         id: 8,
         title: "7zz Gym — Exercise Discovery & Fitness Platform",
@@ -74,7 +101,7 @@ const Work = () => {
         ],
         stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
       },
-      
+
       {
         id: 7,
         title: "VisiGen — AI Image Generation Platform",
@@ -122,7 +149,7 @@ const Work = () => {
       },
       {
         id: 4,
-        title: "Aladdin’s Flight — Arcade Web Game",
+        title: "Aladdin's Flight — Arcade Web Game",
         shortDescription:
           "Fast-paced browser arcade game with simple controls and increasing difficulty.",
         image: project5,
@@ -194,8 +221,6 @@ const Work = () => {
   const handleLoadMore = () => {
     setVisibleCount((prev) => Math.min(prev + LOAD_MORE_STEP, projects.length));
   };
-
-
 
   return (
     <div id="work" className="pt-16 pb-4 bg-[#0e0c1e]">
@@ -342,13 +367,21 @@ const Work = () => {
               <div className="px-8 pb-8 pt-5 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
                 <div className="w-3/4 mx-auto h-auto rounded-2xl bg-white/5 p-4 border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_25px_80px_rgba(0,0,0,0.55)]">
                   <div className="aspect-video overflow-hidden rounded-xl bg-black/40">
-                    <iframe
-                      className="w-full h-full"
-                      src={selectedProject.videoUrl}
-                      title="Project demo"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    {selectedProject.videoUrl ? (
+                      <iframe
+                        className="w-full h-full"
+                        src={selectedProject.videoUrl}
+                        title="Project demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <img
+                        src={selectedProject.image}
+                        alt={selectedProject.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </div>
                 </div>
 
