@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* Secondary section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.65, duration: 0.4 }}
@@ -88,6 +88,7 @@ const Hero = () => {
         >
           <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-4 text-center sm:text-left">
             {/* Text */}
+            {/*
             <div className="flex flex-col">
               <div className="text-sm font-semibold text-white/90">space-H</div>
               <div className="text-sm text-gray-400">
@@ -96,7 +97,7 @@ const Hero = () => {
             </div>
 
             {/* Button */}
-            <motion.a
+            {/* <motion.a
               href="https://spaceh.online"
               target="_blank"
               rel="noopener noreferrer"
@@ -106,8 +107,9 @@ const Hero = () => {
             >
               Visit space-H
             </motion.a>
+            </motion.div>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </motion.div>
     </div>
   );

@@ -12,6 +12,8 @@ import project8 from "../assets/projects/8.png";
 import project9 from "../assets/projects/9.png";
 import project10 from "../assets/projects/10.png";
 import project11 from "../assets/projects/11.png";
+import project12 from "../assets/projects/12.png";
+import project13 from "../assets/projects/13.png";
 
 const INITIAL_VISIBLE = 9;
 const LOAD_MORE_STEP = 6;
@@ -22,6 +24,51 @@ const Work = () => {
 
   const projects = useMemo(
     () => [
+      {
+        id: 13,
+        title: "SecureMap — IoT Abnormal Wait at Automatic Doors Detection System",
+        shortDescription:
+          "Embedded IoT system that detects abnormal waiting at automatic doors, transmits alerts via LoRa, and displays them in real-time on a web dashboard.",
+        image: project13,
+        videoUrl: null,
+        githubLink: "https://github.com/HamzaOuba00-1/iot-system",
+        descriptionLines: [
+          "HC-SR04 ultrasonic sensor detects presence within 80cm — triggers alarm after 5 seconds of abnormal waiting in front of the door",
+          "XOR-encrypted LoRa communication between two Arduino UNO R4 boards",
+          "Node.js gateway reads serial port, decrypts payload, and publishes via MQTT (Mosquitto)",
+          "NestJS backend with PostgreSQL persistence and real-time WebSocket broadcasting",
+          "Next.js dashboard with SVG building map, color-coded door statuses, live feed, and simulation mode",
+          "Full Docker Compose infrastructure",
+        ],
+        stack: [
+          "Arduino",
+          "LoRa",
+          "Node.js",
+          "MQTT",
+          "NestJS",
+          "PostgreSQL",
+          "Next.js",
+          "Docker",
+          "TypeScript",
+        ],
+      },
+      {
+        id: 12,
+        title: "Space-H — Dev Learning & Exercises Platform",
+        shortDescription:
+          "Static React website documenting a web development learning journey, with technical articles and downloadable exercises.",
+        image: project12,
+        videoUrl: null,
+        githubLink: "https://github.com/HamzaOuba00-1/space-h",
+        descriptionLines: [
+          "Technical articles written in Markdown with search and filtering by technology",
+          "Exercises with statements and downloadable ZIP solutions",
+          "Secure Markdown rendering with DOMPurify (XSS prevention)",
+          "Feature-based modular React architecture (articles, exercises, shared components)",
+          "Fully static website — no backend required",
+        ],
+        stack: ["React 19", "TypeScript", "Vite", "TailwindCSS v4"],
+      },
       {
         id: 11,
         title: "Full DevOps Kubernetes Project - Task Manager Platform Demo",
