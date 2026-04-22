@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import cert1 from "../assets/certificates/cert1.png";
 import cert2 from "../assets/certificates/cert2.png";
+import cert3 from "../assets/certificates/cert3.jpeg";
 
 const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -21,6 +22,13 @@ const Certificates = () => {
       date: "December 2025",
       image: cert2,
       verifyUrl: "https://cursa.app/fr/mon-certificat/certa5f8b82fe33628c2c6f9596f21b21756",
+    },
+    {
+      id: 3,
+      title: "Formation Git - GitHub avec codeur-pro",
+      date: "April 2026",
+      image: cert3,
+      verifyUrl: "https://cursa.app/fr/mon-certificat/certab3d8b323236b16559007789028b2d38",
     },
   ];
 
