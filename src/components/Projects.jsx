@@ -79,7 +79,6 @@ const Work = () => {
         githubLink: "https://github.com/HamzaOuba00-1/task-manager-platform",
         descriptionLines: [
           "Full-stack application deployed on Kubernetes (k3d) with real production architecture",
-          "Angular frontend + Spring Boot backend + PostgreSQL database",
           "NGINX Ingress routing with custom domain (task-manager.local)",
           "CI/CD pipeline with GitHub Actions (build, Docker, push)",
           "Monitoring stack with Prometheus + Grafana dashboards",
@@ -88,7 +87,6 @@ const Work = () => {
         stack: [
           "Kubernetes",
           "Docker",
-          "Spring Boot",
           "Angular",
           "PostgreSQL",
           "Prometheus",
